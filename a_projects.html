@@ -1,0 +1,458 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>sample</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+           
+            font-family: Arial, sans-serif;
+        }
+
+        .slider-container {
+            width: 100%;
+        }
+
+        .navbar {
+            background-color: #0b5d3b;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 18px 0;
+            
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            padding-bottom: 6px;
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .navbar a:hover::after,
+        .navbar a.active::after {
+            width: 100%;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(226, 247, 226);
+            padding: 10px 80px;
+            font-size: larger;
+            color: #090909;
+        }
+         .footer {
+            background: #f3f1ec;
+            padding: 60px 10%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            width: 30%;
+            min-width: 250px;
+        }
+
+        .footer h3 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .footer p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .footer ul li i {
+            color: #6db33f;
+            margin-right: 10px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .footer a:hover {
+            color: #6db33f;
+        }
+
+        .social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    color: white;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #6db33f;
+}
+
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+            }
+
+            .footer-column {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+.maintenance-section {
+    padding: 60px 8%;
+}
+
+.maintenance-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.maintenance-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.maintenance-card h2 {
+    margin-bottom: 20px;
+    color: #0b5d3b;
+}
+
+.maintenance-card input,
+.maintenance-card select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.maintenance-card button {
+    width: 100%;
+    padding: 12px;
+    background: #0b5d3b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.maintenance-card button:hover {
+    background: #084d31;
+}
+
+.plant-item {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: #c62828;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #8e0000;
+}
+
+.empty-state {
+    color: gray;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media(max-width: 768px) {
+    .maintenance-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <span>+91 - 94877 89219 / +91 - 96007 74140</span>
+    <span>abc@gmail.com</span>
+</div>
+
+<div style="background-color: white;">
+    <a href="a_home.html" style="padding-left: 100px;"> 
+        <img src="logo1.jpeg" alt="logo" 
+        style="width:20%; height:150px; padding-left: 100px; background-color: white;">
+    </a>
+
+    <img src="top.png" alt="top" style="padding-left: 200px;">
+
+    <a href="a_contact.html"
+   style="
+   float: right;
+   margin-top: 60px;
+   margin-right: 300px;
+   padding: 14px 30px;
+   background-color: rgb(28, 110, 67);
+   color: white;
+   border-radius: 50px;
+   font-size: 18px;
+   font-weight: bold;
+   text-decoration: none;
+   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+   ">
+   Get a Quote
+</a>
+
+</div>
+<nav class="navbar">
+    <a href="a_home.html">Home</a>
+    <a href="a_about.html">About Us</a>
+    <a href="a_our_service.html">Our Services</a>
+    <a href="a_projects.html">Maintenance</a>
+    <a href="a_gallery.html">Gallery</a>
+    <a href="a_faq.html">FAQ’S</a>
+    <a href="a_contact.html">Contact Us</a>
+</nav>
+
+<script>
+    const links = document.querySelectorAll('.navbar a');
+    const currentPage = location.pathname.split('/').pop();
+
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+</script>
+
+<section class="maintenance-section">
+
+    <div class="maintenance-container">
+
+        <div class="maintenance-card">
+            <h2>🌱 Add Plant</h2>
+            <input type="text" id="plantName" placeholder="Plant Name">
+
+            <select id="plantType">
+                <option value="">Select Category</option>
+                <option>Flowering Plants</option>
+                <option>Indoor Plants</option>
+                <option>Outdoor Plants</option>
+                <option>Succulents</option>
+                <option>Cactus</option>
+                <option>Herbs</option>
+                <option>Vegetables</option>
+                <option>Fruits</option>
+                <option>Trees</option>
+                <option>Shrubs</option>
+                <option>Climbers & Creepers</option>
+                <option>Medicinal Plants</option>
+                <option>Aromatic Plants</option>
+                <option>Ornamental Plants</option>
+                <option>Aquatic Plants</option>
+                <option>Air-Purifying Plants</option>
+                <option>Tropical Plants</option>
+                <option>Bonsai</option>
+                <option>Seedlings</option>
+                <option>Hydroponic Plants</option>
+            </select>
+
+            <input type="number" id="frequency" placeholder="Watering Frequency (days)">
+            <button onclick="addPlant()">Add Plant</button>
+        </div>
+
+        <div class="maintenance-card">
+            <h2>🌿 Plant Inventory</h2>
+            <ul id="plantList"></ul>
+            <p id="emptyMessage" class="empty-state">No plants added yet.</p>
+        </div>
+
+    </div>
+
+</section>
+<script>
+let plants = [];
+
+function addPlant() {
+    const name = document.getElementById("plantName").value.trim();
+    const type = document.getElementById("plantType").value.trim();
+    const freq = document.getElementById("frequency").value.trim();
+
+    if (!name || !type || !freq) {
+        alert("All fields are required.");
+        return;
+    }
+
+    const plant = {
+        id: Date.now(),
+        name,
+        type,
+        frequency: freq,
+        addedOn: new Date().toLocaleDateString()
+    };
+
+    plants.push(plant);
+    renderPlants();
+
+    document.getElementById("plantName").value = "";
+    document.getElementById("plantType").value = "";
+    document.getElementById("frequency").value = "";
+}
+
+function renderPlants() {
+    const list = document.getElementById("plantList");
+    const emptyMsg = document.getElementById("emptyMessage");
+    list.innerHTML = "";
+
+    if (plants.length === 0) {
+        emptyMsg.style.display = "block";
+        return;
+    }
+
+    emptyMsg.style.display = "none";
+
+    plants.forEach(plant => {
+        const li = document.createElement("li");
+        li.className = "plant-item";
+
+        li.innerHTML = `
+            <div>
+                <strong>${plant.name}</strong><br>
+                Category: ${plant.type}<br>
+                Water every ${plant.frequency} days<br>
+                Added: ${plant.addedOn}
+            </div>
+            <button class="delete-btn" onclick="deletePlant(${plant.id})">Delete</button>
+        `;
+
+        list.appendChild(li);
+    });
+}
+
+function deletePlant(id) {
+    plants = plants.filter(plant => plant.id !== id);
+    renderPlants();
+}
+</script>
+
+
+<br><br>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- About Us -->
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>
+                Aadhi Greens is a gardening and landscaping company creating custom gardens since 2015.
+                With a passionate team and efficient processes, we deliver high-quality landscape solutions for 
+               residential and commercial clients—on time, every time.
+            </p>
+
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><i class="fas fa-leaf"></i><a href="a_home.html">Home</a></li>
+                <li><i class="fas fa-leaf"></i><a href="a_about.html">About us</a></li>
+                <li><i class="fas fa-leaf"></i><a href="a_our_service.html">Our Services</a></li>
+                <li><i class="fas fa-leaf"></i><a href="a_projects.html">Maintenance</a></li>
+                <li><i class="fas fa-leaf"></i><a href="a_gallery.html">Gallery</a></li>
+                <li><i class="fas fa-leaf"></i><a href="a_faq.html">FAQ'S</a></li>
+                <li><i class="fas fa-leaf"></i><a href="a_contact.html">Contact us</a></li>
+            </ul>
+        </div>
+
+        <!-- Our Services -->
+        <div class="footer-column">
+            <h3>Our Services</h3>
+            <ul>
+                <li><i class="fas fa-leaf"></i>Landscaping & Gardening</li>
+                <li><i class="fas fa-leaf"></i>Agri Consulting & Landscaping</li>
+                <li><i class="fas fa-leaf"></i>Gardening Tools</li>
+                <li><i class="fas fa-leaf"></i>Organic Manure</li>
+                <li><i class="fas fa-leaf"></i>Support and Maintenance</li>
+                
+            </ul>
+        </div>
+
+    </div>
+</footer>
+<footer style="background-color: #d0e4dc; color: rgb(0, 0, 0); text-align: center; padding: 20px 0; font-size: larger;">A-36, Sipcot Executive Colony,
+     ESI Hospital (Beside), Ring Road, Hosur – 635126, Tamilnadu. India<br>
+Call us @ +91 9487789219, Email : aadhisureshc@gmail.com</footer>
+
+</body>
+</html>
